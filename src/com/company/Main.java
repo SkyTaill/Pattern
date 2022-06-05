@@ -1,5 +1,7 @@
 package com.company;
 
+import com.company.genBuilder.Employee;
+import com.company.genBuilder.Gen;
 import com.company.genFabric.GenSampleFabric;
 import com.company.genSample.ClassicGen;
 import com.company.genSample.ClassicGenPlus;
@@ -17,5 +19,9 @@ public class Main {
         classicGen.getIterationOfEvolution();
         classicGenPlus.getIterationOfEvolution();
         modifiedGen.getIterationOfEvolution();
+
+
+        Gen gen=new Gen.GenBuilder(23).setMutation("dd").build();
+        System.out.println(gen.toString());
     }
 }
